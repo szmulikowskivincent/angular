@@ -1,0 +1,313 @@
+/*css flex-box*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex; /* crée un contexte flex pour ses enfants */
+    flex-direction: column; /* affichage vertical */
+    block-size: 100vh; /* toute la hauteur du viewport */
+    padding: 1em;
+    border-radius: 5%;
+}
+
+.tout {
+    flex: 1 1 auto;
+    display: flex; /* crée un contexte flex pour ses enfants */
+}
+
+nav,
+aside {
+    inline-size: 10em;
+}
+
+aside{
+    border: 2.5px solid rgb(104, 107, 103);
+    border-radius: 15px;
+}
+
+
+article {
+    flex: 3; /* occupe tout l'espace restant */
+}
+
+nav {
+    order: 2; /* nav s'affiche en dernier*/
+    flex: 1;
+}
+
+/* Responsive (fenêtres de moins de 700px) */
+
+@media(max-inline-size: 700px) {
+    .tout {
+        flex-direction: column; /* affichage vertical */
+    }
+    nav,
+    aside {
+        inline-size: auto; /* pour écraser la valeur 10em */
+    }
+    nav,
+    aside,
+    article {
+        flex-basis: 1; /* pour écraser la valeur 0, due au flex: 1 */
+    }
+    nav {
+        order: 1; /* nav prend la 1ère place */
+    }
+    article {
+        order: 2; /* article prend la 2ème place */
+    }
+    aside {
+        order: 3; /* aside prend la dernière place */
+    }
+}
+
+/* apparence */
+
+body {
+    margin: 5;
+    background: #ffffff;
+    font-family: arial, sans-serif;
+}
+
+header,
+nav,
+aside,
+article,
+footer {
+    margin: 0.2em;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+header {
+    margin-block-start: -1em;
+    background: #025974;
+}
+
+header{
+    border: 2.5px solid rgb(104, 107, 103);
+    border-radius: 15px;
+}
+
+nav {
+    background: #c3e8f1;
+}
+
+aside {
+    background: #025974;
+}
+
+article {
+    background: #c3e8f1;
+}
+
+footer {
+    background: #025974;
+}
+
+footer{
+    border: 2.5px solid rgb(104, 107, 103);
+    border-radius: 15px;
+}
+
+/*css avatar*/
+.avatar {
+    vertical-align: middle;
+    inline-size: 55px;
+    block-size: 55px;
+    border-radius: 50%;
+}
+
+/*css bare de recherche*/
+.recherche {
+    inset-inline-start: 165px;
+    inset-block-start: 65px;
+    position: absolute;
+    inline-size: 350px;
+    block-size: 40px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(104, 107, 103);
+}
+
+/*css div-box header*/
+.box {
+    display: grid;
+    inline-size: 250px;
+    grid-template-columns: 120px 120px 120px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+/*css avatar header*/
+span.imageDroite {
+    inset-inline-start: 1950px;
+    inset-block-start: 25px;
+    position: absolute;
+
+    /* Un rond vert */
+    block-size: 115px;
+    inline-size: 115px;
+    border-radius: 50%;
+    background-color: rgb(173, 182, 173);
+    border: 5px solid rgb(33, 250, 4);
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*csc notification*/
+span.notification {
+    inset-inline-start: 1780px;
+    inset-block-start: 42px;
+    position: absolute;
+
+    block-size: 40px;
+    inline-size: 40px;
+    border-radius: 50%;
+
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*csc tchat*/
+span.tchat {
+    inset-inline-start: 1850px;
+    inset-block-start: 42px;
+    position: absolute;
+
+    block-size: 40px;
+    inline-size: 60px;
+    border-radius: 50%;
+
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*css button partage live*/
+span.partage1 {
+    inset-inline-start: 850px;
+    inset-block-start: 42px;
+    position: absolute;
+
+    block-size: 60px;
+    inline-size: 60px;
+    border-radius: 50%;
+
+/* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*css button partage youtube*/
+span.partage2 {
+    inset-inline-start: 990px;
+    inset-block-start: 35px;
+    position: absolute;
+
+    block-size: 60px;
+    inline-size: 60px;
+    border-radius: 50%;
+
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*css button partage youtube*/
+span.partage3 {
+    inset-inline-start: 1100px;
+    inset-block-start: 45px;
+    position: absolute;
+
+    block-size: 60px;
+    inline-size: 60px;
+    border-radius: 50%;
+
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*css my-button*/
+.myButton {
+	box-shadow: 3px 4px 0px 0px #3dc21b;
+	background-color:transparent;
+	border-radius:18px;
+	border:1px solid #0de022;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+    list-style-type: none;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+
+}
+
+/*css vatar change header*/
+.input {
+    border:11px solid #025974; 
+    background-color: #0de022;
+    padding:5px; 
+    font-size:29%; 
+    background:#b3b1b1; 
+    inline-size:160px; 
+    } 
+
+
+
+
+    
+
+
+
+
+
+
+
+  

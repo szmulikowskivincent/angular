@@ -1,0 +1,642 @@
+<!--structure flex-box-->
+<body>
+  <header>
+    <div class="box">
+      <div>
+        <a>
+          <img src="assets/avatar/avatar_logo_sit.png" class="" width="89%" />
+        </a>
+      </div>
+      <form method="post">
+        <div>
+          <label for="mySearch"></label>
+          <input
+            type="search"
+            id="mySearch"
+            name="q"
+            placeholder="🔎 Search in live-tchat... (4 à 15 caractéres)"
+            required
+            size="30"
+            minlength="4"
+            maxlength="15"
+            class="recherche"
+          />
+        </div>
+      </form>
+      <!--button"header partage reseaux sociaux-->
+      <span class="partage1">
+        <a
+          href="#"
+          href="https://www.websiteplanet.com/fr/webtools/sharelink/"
+          title="🔗 partage!"
+        >
+          <img
+            src="assets/imgs/logo_Messenger_live.webp"
+            width="90%"
+            style="border-radius: 100px"
+        /></a>
+      </span>
+    </div>
+    <span class="partage2">
+      <a
+        href="https://www.youtube.com/"
+        title="🎞️ video"
+        onclick="alert('⚠️ vous allez visionner une video')"
+      >
+        <img src="assets/imgs/image_Youtube.png" width="90%" />
+      </a>
+    </span>
+    <span class="partage3">
+      <a
+        title="🙂 amis"
+        onclick="alert('🤵Jacque Dufourmoie 🦸‍♂️ Jo Lesage 🧞‍♂️ Joseph Loumbumba 🧝 jacqueline Dufrasne 👽 Martial Dumas 👳 Onis Mamastay 🤵🏼 Jean Dujardin 🕵🏼‍♂️ Denis Doison 👨‍⚕️ Docteur Hitany  ')"
+      >
+        <img src="assets/imgs/R.png" width="90%" style="border-radius: 50%" />
+      </a>
+    </span>
+    <span class="tchat">
+      <a
+        href="https://html5-chat.com/chat"
+        title="💬 clic tchat!"
+        onclick="alert('⚠️ vous allez acceder au tchat')"
+      >
+        <img src="assets/imgs/icone_Tchat.png" width="65%" />
+      </a>
+    </span>
+    <span class="notification">
+      <a
+        onclick="alert('🔔 Vous avez 1 notification de Jean René => Jean René a commenté votre photo: trés jolie initiative de reconvertion professionnelle (bravo) ✅✅✅')"
+      >
+        <img
+          src="assets/imgs/image_Notifications.png"
+          width="100%"
+          style="border-radius: 50%"
+          title="🔔 notifications!"
+        />
+      </a>
+    </span>
+
+    <!--Upload avatar profil-->
+    <span class="imageDroite">
+      <form method="post" enctype="multipart/form-data">
+        <br />
+        &#160;&#160;&#160;<img
+          [src]="imageURL"
+          width="42%"
+          alt="V"
+          style="border-radius: 50%"
+          title="🟢en ligne"
+        />
+        <input
+          class="input"
+          type="file"
+          id="files"
+          type="file"
+          (change)="onFileChange($event)"
+          id="profile_pic"
+          name="profile_pic"
+          accept=".jpg,.jpeg,.png,"
+          title="📷 Your avatar"
+        />
+      </form>
+    </span>
+    &#160;&nbsp;
+    <li
+      onclick="confirm('🔓 Log out?')"
+      class="imageDroite"
+      routerLink="/MyForm"
+      style="display: inline-flex"
+      title="🔓logout"
+    >
+      🔴logout!
+    </li>
+  </header>
+
+  <!--<span
+          class="imageDroite"
+          onclick="confirm('🔓 Déconnexion?')"
+          routerLink="/MyForm"
+        >
+          <img
+            src="assets/avatar/avatar1.png"
+            width="80%"
+            alt="logo cellule"
+            title="🟢en ligne"
+            align="left"
+        /></span>-->
+
+  <div class="tout">
+    <article>
+      <h3 align="right" style="color: rgb(0, 0, 0)"></h3>
+      <article
+        align="left"
+        id="post-168603"
+        class="first post-168603 post type-post status-publish format-standard has-post-thumbnail hentry category-authentification category-m2m category-virus category-operating-system category-security-management category-workspace category-networks category-security tag-botnet tag-ddos tag-iot tag-iot_featured tag-linux tag-microsoft tag-mirai tag-windows"
+      >
+        <figure>
+          <a
+            href="https://www.msn.com/fr-be/actualite/other/l-ukraine-dispose-d-un-nouveau-drone-secret-qui-vient-de-co%C3%BBter-plusieurs-millions-%C3%A0-la-russie/ss-AA1hM3kx?ocid=msedgntp&cvid=576da6039e7d4a158f8a697aaecd924d&ei=8"
+            title="💻 Les infos en directe"
+            rel="bookmark"
+          >
+            <img
+              width="431px"
+              height="230px"
+              src="assets/imgs/image_filActualité.png"
+              class="attachment-top-stories wp-post-image"
+            />
+            &#160;&nbsp;
+            <a
+              href="https://www.msn.com/fr-be/actualite/politique/les-discussions-budg%C3%A9taires-avancent/ar-AA1hSUnC?ocid=msedgntp&cvid=83795d8b81dd487599c30f6d17fe1142&ei=19"
+              title="💻 Les infos en directe"
+              rel="bookmark"
+            >
+              <img
+                width="431px"
+                height="230px"
+                src="assets/imgs/image_Infos2.png"
+                class="attachment-top-stories wp-post-image"
+              />
+              &#160;&nbsp;
+              <a
+                href="https://www.msn.com/fr-be/video/actualite/otages-isra%C3%A9liens-retenus-par-le-hamas-quelle-sera-la-strat%C3%A9gie-d-isra%C3%ABl/vi-AA1hSq0l?ocid=msedgdhp&pc=U531&cvid=46fbfaf3579941d29c689a485442273a&ei=64"
+                title="💻 Les infos en directe"
+                rel="bookmark"
+              >
+                <img
+                  width="431px"
+                  height="230px"
+                  src="assets/imgs/image_Infos3.png"
+                  class="attachment-top-stories wp-post-image"
+                />
+              </a>
+            </a>
+          </a>
+        </figure>
+      </article>
+      <article align="left">
+        <section class="article_commentaires">
+          <div class="container">
+            <table style="border: 2.5px solid rgb(68, 70, 67)">
+              <tr style="border: 2.5px solid rgb(104, 107, 103)">
+                <div class="article_commentaires_titre">3 Commentaires</div>
+              </tr>
+            </table>
+            <br />
+            <div class="article_commentaire_nom">🔴Commentaire de Garçon</div>
+            <i class="fas fa-quote-right article_commentaire_texte_quote">
+              Merci beaucoup pour votre article, Je voulais savoir pourquoi
+              cette guerre en Ukraine🩸🩸🩸.<br />
+              Une fois encore merci pour votre article et à bientôt.</i
+            >
+          </div>
+          <div class="article_commentaire_date">
+            Envoyé le 10 juillet 2023 à 15:18
+          </div>
+          <a onclick="alert('👍 Vous venez de liker! ✅')">
+            <img align="left" src="#" width="3%" title="(32) 👍 like!" />
+          </a>
+          <br />
+          &#160;&nbsp;
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+          <br />
+          <div class="article_commentaire_nom">🟢Réponse de Breizhmasters</div>
+          <i class="fas fa-quote-right article_commentaire_texte_quote">
+            @ Garçon : Il est possible de ne plus discuter chaque jour de ce
+            sujet, merci.
+          </i>
+          <div class="article_commentaire_date">
+            Envoyé le 10 juillet 2023 à 16:55
+          </div>
+          <a onclick="alert('👍 Vous venez de liker!')">
+            <img align="left" src="#" width="3%" title="(18) 👍 like!" />
+          </a>
+          &#160;&nbsp;
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+          <br />
+          <br />
+          <div class="article_commentaire_nom">🔴Commentaire de Garçon</div>
+          <div class="article_commentaire_nom">Commentaire de Dylane</div>
+          <div class="article_commentaire_texte">
+            <i class="fas fa-quote-right article_commentaire_texte_quote">
+              Bonjour,quand est ce que la guerre en Ukraine se terminera ?
+              Merci! 🖤💔😔
+            </i>
+          </div>
+          <div class="article_commentaire_date">
+            Envoyé le 17 mars 2023 à 00:59
+          </div>
+        </section>
+      </article>
+      &#160;&nbsp; &#160;<label for="name"
+        >Ajouter un commentaire (25 to 125 characters)</label
+      >
+      <br /><br />
+      <input
+        type="text"
+        id="commentaire"
+        name="commentaire"
+        required
+        minlength="25"
+        maxlength="125"
+        placeholder="commentaire..."
+        size="45"
+        style="
+          background-color: rgb(255, 255, 255);
+          border: 2.5px solid rgb(104, 107, 103);
+          border-radius: 9px;
+          block-size: 35px;
+        "
+      />
+      <!--ajouter un fichier-->
+      <br />
+      &#160;&nbsp; &#160;
+      <ul>
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <img
+              [src]="imageURL"
+              width="15%"
+              alt="Votre fichier..."
+              class="img"
+            />
+            &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload you file
+            </label>
+          </div>
+        </form>
+      </ul>
+    </article>
+    <nav>
+      <div class="tout">
+        <article align="center">
+          <h3 style="color: rgb(0, 0, 0)"></h3>
+          <br />
+          <iframe
+            allow="autoplay muted"
+            width="275px"
+            height="275px"
+            src="https://www.youtube.com/embed/iHtRG8EixWY"
+            frameborder="0"
+            allowfullscreen=""
+          ></iframe>
+          <br /><br /><br />
+          <iframe
+            allow="autoplay muted"
+            width="275px"
+            height="275px"
+            src="https://auvio.rtbf.be/live/tipikvision-423789#/"
+            frameborder="0"
+            allowfullscreen=""
+          ></iframe>
+        </article>
+      </div>
+      <article align="center">
+        <a
+          onclick="alert('👩🏿‍❤️‍👩🏿 Joyeuse anniverssaire BERNADETTE EUGENE...🎁🎈🍾🥳')"
+        >
+          <img
+            src="assets/imgs/logo_Anniverssaire.png"
+            width="275px"
+            height="65px"
+          />
+        </a>
+      </article>
+      <div align="center">
+        <a onclick="alert('👍 Vous venez de liker! ✅')">
+          <img
+            align=""
+            src="assets/button/icon-like.gif"
+            width="10%"
+            title="👍 like!"
+            style="
+              background-color: rgb(173, 182, 173);
+              border: 3.5px solid rgb(255, 0, 0);
+              border-radius: 50%;
+            "
+          /> </a
+        >&#160;&nbsp;
+        <a onclick="alert('👍 Vous venez de partager! ✅')">
+          <img
+            align=""
+            src="assets/button/icone_Partager.jpg"
+            width="10%"
+            title="🔗 partager!"
+            style="
+              background-color: rgb(173, 182, 173);
+              border: 3.5px solid rgb(255, 0, 0);
+              border-radius: 50%;
+            "
+          />
+        </a>
+      </div>
+      <div align="center">
+        <!--compteur de visite du site-->
+        <div id="sfcnyeh2me4axkka31x23w3y3me8797rahe"></div>
+        <script
+          type="text/javascript"
+          src="https://counter6.optistats.ovh/private/counter.js?c=nyeh2me4axkka31x23w3y3me8797rahe&down=async"
+          async
+        ></script>
+        <br /><a href="https://www.compteurdevisite.com"></a
+        ><noscript
+          ><a href="https://www.compteurdevisite.com" title="compteur de visite"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=nyeh2me4axkka31x23w3y3me8797rahe"
+              border="0"
+              title="compteur de visite"
+              alt="compteur de visite" /></a
+        ></noscript>
+        <a href="https://www.compteurdevisite.com" title="compteur de visite"
+          ><img
+            src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=nyeh2me4axkka31x23w3y3me8797rahe"
+            border="0"
+            title="compteur de visite"
+            alt="compteur de visite"
+        /></a>
+      </div>
+    </nav>
+    <aside>
+      <div align="center" class="select-style">
+        <select style="border-radius: 10px">
+          <option value="javascript">Friends</option>
+          <option
+            value="friend"
+            title="ℹ️ age: 49 ans sexe: masculin inscription: 10/08/2021"
+          >
+            👨🏻Denis
+          </option>
+          <option value="friend">👩Mélanie</option>
+          <option value="friend">🕵️Joseph</option>
+          <option value="friend">💁🏽Louis</option>
+          <option value="friend">🤷‍♀️Delphine</option>
+          <option value="friend">🌴Josephine</option>
+          <option value="friend">😁Eric</option>
+          <option value="friend">🤡Nicolas</option>
+          <option value="friend">🧑🏻‍💻Nicole</option>
+          <option value="friend">🙊Nicole</option>
+        </select>
+      </div>
+      <br />
+      <div align="center">
+        <img
+          src="assets/imgs/logo_Messenger_live.webp"
+          class=""
+          href="#"
+          width="45%"
+          title="👬🏿 amis"
+        />
+        <br /><br /><br /><br />
+        <section>
+          &#160;&nbsp;<a href="https://html5-chat.com/chat">
+            <img
+              src="assets/avatar/avatar2.png"
+              alt="Avatar"
+              class="avatar"
+              title="🟢en ligne
+                         🛈 
+                      Jacque Dufourmoie
+                      sexe: masculin
+                      âge: 42
+                      inscrit depuis: 21 juin 2007"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat"
+            ><img
+              src="assets/avatar/avatar3.jpg"
+              alt="Avatar"
+              class="avatar"
+              title="🔴occupé
+                         🛈 
+                      Jo Lesage
+                      sexe: masculin
+                      âge: 28
+                      inscrit depuis: 07 avril 2023"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat"
+            ><img
+              src="assets/avatar/avatar5.webp"
+              alt="Avatar"
+              class="avatar"
+              title="🔴occupé
+                         🛈 
+                      Onis Mamastay
+                      sexe: masculin
+                      âge: 71
+                      inscrit depuis: 02 janvier 2023"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat">
+            <img
+              src="assets/avatar/avatar6.png"
+              alt="Avatar"
+              class="avatar"
+              title="🔴occupé"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat">
+            <img
+              src="assets/avatar/avatar7.png"
+              alt="Avatar"
+              class="avatar"
+              title="🟢en ligne"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat">
+            <img
+              src="assets/avatar/avatar7.webp"
+              alt="Avatar"
+              class="avatar"
+              title="🔴 absent"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat">
+            <img
+              src="assets/avatar/avatar8.jpg"
+              alt="Avatar"
+              class="avatar"
+              title="🟢en ligne"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat">
+            <img
+              src="assets/avatar/avatar9.jpg"
+              alt="Avatar"
+              class="avatar"
+              title="🔴occupé
+                         🛈 
+                      Joseph Loumbumba
+                      sexe: masculin
+                      âge: 58
+                      inscrit depuis: 04 janvier2005"
+          /></a>
+          <br /><br />
+          &#160;&nbsp;<a href="https://html5-chat.com/chat"
+            ><img
+              src="assets/avatar/avatar7.png"
+              alt="Avatar"
+              class="avatar"
+              title="🟢en ligne
+                          🛈 
+                      Denis Doison
+                      sexe: masculin
+                      âge:62
+                      inscrit depuis: 08 mars 1998"
+          /></a>
+        </section>
+      </div>
+      <br /><br />
+      <!--button routeur vers mes médias-->
+      &#160;&nbsp;&#160;&nbsp;&#160;&nbsp;<input
+        id="button_Photo"
+        type="image"
+        width="75"
+        height="75"
+        alt="médias"
+        title="🎞️ Vos médias"
+        src="assets/button/avatar_ButtonUpload.png"
+        routerLink="/Dashboard"
+      />
+    </aside>
+  </div>
+  <footer align="center">
+    <!--button réseau social jeux-market-souvenir-data-->
+    <a href="https://1drv.ms/f/s!Agq7QnMpjNWcyK4Cf--HZYjuN4xsNw?e=qdnfio">
+      <img
+        align="left"
+        src="assets\qrcode_localhost.png"
+        width="4%"
+        style="border-radius: 5%" />
+      <img
+        src="assets/button/button_Souvenirs.webp"
+        width="2.5%"
+        title="🕜 souvenirs"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://www.myhealth.belgium.be/#/">
+      <img
+        src="assets/button/button_Santé.jpg"
+        width="2.5%"
+        title="🍌🍉🍓 santé"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://clideo.com/fr/video-editor">
+      <img
+        src="assets/button/button_Video.png"
+        width="2.5%"
+        title="🎞️ video"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://www.facebook.com/marketplace/?ref=bookmark">
+      <img
+        src="assets/button/button_Market.jpg"
+        width="2.5%"
+        title="🛒 market"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://www.crazygames.fr/t/arcade">
+      <img
+        src="assets/button/button_Jeux.jpg"
+        width="2.5%"
+        title="🎮🕹️👾 jeux"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+      />
+      <div align="right">
+        <input
+          style="background: #025974; color: white"
+          type="date"
+          id="start"
+          name="trip-start"
+          value="2023-25-11"
+          min="2023-01-01"
+          max="2030-12-31"
+        />
+      </div>
+    </a>
+    <h5 style="color: white">
+      👉 © 2023, My app ❙❙ social network ❙❙ Szmulikowski Vincent (stagiaire
+      technofuturtic / Java-Angular)
+    </h5>
+  </footer>
+</body>

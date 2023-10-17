@@ -1,0 +1,41 @@
+<!DOCTYPE html lang="an">
+<html>
+  <head>
+    <title>Chat en ligne</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="chat">
+      <div id="messages">
+        <span class="imageDroite">
+          <a
+            href="https://fr.html5-chat.com/chat"
+            title="🔓 logout!"
+            onclick="alert('⚠️ logout!')"
+          >
+            <img
+              src="src/assets/avatar/avatar1.png"
+              width="100%"
+              alt="logo cellule"
+              title="vincent szmulikowski
+        🟢en ligne"
+              align="left" /></a
+        ></span>
+      </div>
+      <!-- Les messages seront affichés ici -->
+      <form id="formulaire">
+        <input
+          type="text"
+          id="message"
+          placeholder="💬 Please enter your message here..."
+        />
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </body>
+  <script src="./src/script.js"></script>
+</html>
+
+<!--pour afficher le tchat: démarer le serveur nod js => npm run start:server -->

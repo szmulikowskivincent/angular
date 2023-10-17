@@ -1,0 +1,907 @@
+<body>
+  <header class="header">
+    <div class="box">
+      <!--button routeur vers mes médias-->
+      <div>
+        <input
+          id="button_"
+          type="image"
+          width="90px"
+          height="90px"
+          alt="Flashback"
+          title="⏪ Flashback"
+          src="assets/button/image_RetourArriére.jpg"
+          routerLink="/header"
+          class="button-link"
+        />
+      </div>
+      <form method="post">
+        <div>
+          <label for="mySearch"></label>
+          <input
+            type="search"
+            id="mySearch"
+            name="q"
+            placeholder="🔎 Search in live-tchat... (4 à 15 caractéres)"
+            required
+            size="30"
+            minlength="4"
+            maxlength="15"
+            class="recherche"
+          />
+        </div>
+      </form>
+    </div>
+    <span class="tchat">
+      <a
+        href="https://html5-chat.com/chat"
+        title="💬 clic tchat!"
+        onclick="alert('⚠️ vous allez acceder au tchat')"
+      >
+        <img src="assets/imgs/icone_Tchat.png" width="70%" />
+      </a>
+    </span>
+    <span class="notification">
+      <a
+        onclick="alert('🔔 Vous avez 1 notification de Jean René => Jean René a commenté votre photo: trés jolie initiative de reconvertion professionnelle (bravo) ✅✅✅')"
+      >
+        <img
+          src="assets/imgs/image_Notifications.png"
+          width="70%"
+          style="border-radius: 50%"
+          title="🔔 notifications!"
+        />
+      </a>
+    </span>
+    <span class="imageDroite" onclick="confirm('🔓 Upload Avatar?') ">
+      <img
+        src="assets/avatar/avatar1.png"
+        width="85%"
+        alt="logo cellule"
+        title="🟢en ligne"
+        align="left"
+    /></span>
+  </header>
+  <div class="wrapper">
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/avatar/avatar1.png"
+          width="25%"
+          alt="logo cellule"
+          title="🟢en ligne"
+        />
+      </div>
+      <br />
+      <a align="center">Vos photos (profil)</a>
+      <br />
+      <article title="👤 Profil">
+        <section>
+          <img src="" width="60%" />
+          <img
+            src="assets\Moi\278489606_111525528198571_4745847489187036541_n.jpg"
+            width="45%"
+          /><img src="" width="45%" />&#160;
+          <img
+            src="assets\Moi\278498470_111525424865248_1178164730615324297_n.jpg"
+            width="80px"
+            height="100x"
+          />&#160;
+          <img
+            src="assets\Moi\278543618_111525431531914_9059950214321652610_n.jpg"
+            width="90px"
+            height="95px"
+          />
+          &#160;
+          <img
+            src="assets\Moi\278603635_111525428198581_4106408924342832484_n.jpg"
+            width="45%"
+          />
+          &#160;
+          <img
+            src="assets\Moi\278604222_111532294864561_6296646713103934648_n.jpg"
+            width="90px"
+            height="120px"
+          />
+          &#160;
+          <img
+            src="assets\Moi\314710803_174621848555605_7803549646682391206_n.jpg"
+            width="100px"
+            height="112px"
+          />
+          <img
+            src="assets\Moi\312473086_171929875491469_8439782218981400417_n.jpg"
+            width="95px"
+            height="115px"
+          />
+          &#160;
+          <img
+            src="assets\Moi\278604222_111532294864561_6296646713103934648_n.jpg"
+            width="95px"
+            height="115px"
+          />
+          <img
+            src="assets\Moi\278658979_111525494865241_8179968557133820770_n.jpg"
+            width="60%"
+          />
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(125) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/imgs/image_PhotosCouverture.jpg"
+          width="25%"
+          alt="logo cellule"
+          title="🏅 Vos téléchargements"
+          style="border-radius: 50%"
+        />
+      </div>
+      <a align="center">Vos photos (Téléchargement)</a>
+      <br />
+      <article title="🏅 Sport">
+        <section>
+          <img
+            src="assets\Sport\280397624_124192140265243_1717626420243352520_n.jpg"
+            width="100%"
+          />
+          <img
+            src="assets\Sport\280696769_124192130265244_5183912904232740361_n.jpg"
+            width="100%"
+          />
+          <img
+            src="assets\Sport\280754165_124192113598579_7507894911698666362_n.jpg"
+            width="100%"
+          />
+          <img
+            src="assets\Sport\292087543_142571561760634_5892259720607100126_n.jpg"
+            width="100%"
+          />
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(125) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/imgs/image_PhotosTéléchargement.jpg"
+          width="25%"
+          alt="logo cellule"
+          title="🌆 Couverture"
+          style="border-radius: 50%"
+        />
+      </div>
+      <a align="center">Vos photos (Couverture)</a>
+      <br />
+      <article title="🌆 Couverture">
+        <section>
+          <img
+            src="assets\couverture\322724042_885864499206909_3720681671841154419_n.jpg"
+            width="100%"
+          />
+          <img src="" width="45%" />
+          <img
+            src="assets\couverture\324435637_1509303366247785_2463778707309469592_n.jpg"
+            width="100%"
+          />
+          <img src="" width="35%" />
+          <img
+            src="assets\couverture\326523257_2062495467280021_6981707961697641679_n.jpg"
+            width="100%"
+          />
+          <img
+            src="assets\couverture\331928928_1904064173319578_7892114711807608478_n.jpg"
+            width="100%"
+          />
+          <img
+            src="assets\couverture\333811646_5751448854904716_8122028762180757470_n.jpg"
+            width="150px"
+            height="210px"
+          />
+          <img
+            src="assets\couverture\334279292_156951420510501_8959970237109038663_n.jpg"
+            width="95%"
+          />
+          <img
+            src="assets\couverture\340533906_779066476701467_4107992649008079695_n.jpg"
+            width="200px"
+            height="115px"
+          />
+          <img
+            src="assets\couverture\382965970_322248390459616_622785859261001337_n.jpg"
+            width="100%"
+          />
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(125) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <br />
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/avatar/avatar3.jpg"
+          alt="Avatar"
+          class="avatar"
+          width="25%"
+          style="border-radius: 50%"
+          title="Vos photos (Vous)"
+        />
+      </div>
+      <br />
+      <a align="center">Vos photos (Vous)</a>
+      <br />
+      <article title="🌊 Téléchargement">
+        <section>
+          <img
+            src="assets\Téléchargement\Capture d'écran 2023-10-15 135056.png"
+            width="100%"
+          />
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(125) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/imgs/image_Album.jpg"
+          width="25%"
+          alt="logo cellule"
+          title="🖼️ Vos albums"
+          style="border-radius: 15%"
+        />
+      </div>
+      <br />
+      <a align="center">Vos photos (Albums)</a>
+      <br />
+      <article title="🖼️ Vos albums">
+        <section>
+          <img src="assets\albums\image_Album1.png" width="100%" />
+          <img src="assets\albums\image_Album2.png" width="100%" />
+          <img src="assets\albums\image_Album4.png" width="100%" />
+          <img src="" width="35%" />
+          <img src="assets\albums\image_Album5.png" width="100%" />
+          <img src="assets\albums\image_Album6.png" width="100%" />
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(125) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/button/button_Video.png"
+          width="25%"
+          title="🎞️ video"
+          style="
+            background-color: rgb(173, 182, 173);
+            border: 3.5px solid rgb(255, 0, 0);
+            border-radius: 50%;
+          "
+        />
+      </div>
+      <br />
+      <a align="center">Vos videos</a>
+      <br />
+      <article title="🎞️ Vos vidéos => Paris 2023">
+        <section>
+          <iframe
+            poster="vignette.jpg"
+            width="210px"
+            height="180px"
+            src="assets/Mes images souvenirs/Paris/Video Paris.mp4"
+            frameborder="0"
+            allowfullscreen=""
+          ></iframe>
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(32) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/imgs/image_Story.png"
+          width="25%"
+          alt="logo cellule"
+          title="Vos téléchargements"
+          style="border-radius: 50%"
+          title="ℹ Vos storys"
+        />
+      </div>
+      <br />
+      <a align="center">Vos storys</a>
+      <br />
+      <article title="ℹ Vos storys">
+        <section>
+          <img
+            src="assets\Story\Capture d'écran 2023-10-15 133212.png"
+            width="100%"
+          /><img
+            src="assets\Story\Capture d'écran 2023-10-15 133229.png"
+            width="100%"
+          />
+          <img
+            src="assets\Story\Capture d'écran 2023-10-15 133250.png"
+            width="100%"
+          />" />
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(125) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+    <nav id="navigation" role="navigation">
+      <br />
+      <div align="center">
+        <img
+          src="assets/button/button_Souvenirs.webp"
+          width="25%"
+          title="🕜 souvenirs"
+          style="
+            background-color: rgb(173, 182, 173);
+            border: 3.5px solid rgb(255, 0, 0);
+            border-radius: 50%;
+          "
+        />
+      </div>
+      <br />
+      <a align="center">Vos souvenirs</a>
+      <br />
+      <article title="🗼 Paris 2023">
+        <section>
+          <img
+            src="assets/Mes images souvenirs/Paris/Vincent-Maman-Andréas Tour-efiel.jpg"
+            width="60%"
+          />&#160;
+          <img
+            src="assets/Mes images souvenirs/Paris/Vincent-Andréas resto.jpg"
+            width="45%"
+          />&#160;
+          <img
+            src="assets/Mes images souvenirs/Paris/Hotel7.jpg"
+            width="45%"
+          />&#160;
+          <img
+            src="assets/Mes images souvenirs/Paris/Maman-Vincent Tour-efiel.jpg"
+            width="35%"
+          />&#160;
+          <img
+            src="assets/Mes images souvenirs/Paris/Hotel10.jpg"
+            width="115px"
+            height="95px"
+          />
+          &#160;
+          <img src="assets/Mes images souvenirs/Paris/Hotel1.jpg" width="45%" />
+          &#160;
+          <img
+            src="assets/Mes images souvenirs/Paris/Resto4.jpg"
+            width="90px"
+            height="120px"
+          />
+          &#160;
+          <img src="assets/Mes images souvenirs/Paris/Hotel2.jpg" width="42%" />
+          &#160;
+          <img
+            src="assets/Mes images souvenirs/Paris/Hotel5.jpg"
+            width="95px"
+            height="115px"
+          />
+          &#160;
+          <img src="assets/Mes images souvenirs/Paris/Hotel8.jpg" width="60%" />
+          <div id="sfc5fcqfzypudgdsemnsbze6b7t65tseqn5"></div>
+          <script
+            type="text/javascript"
+            src="https://counter6.optistats.ovh/private/counter.js?c=5fcqfzypudgdsemnsbze6b7t65tseqn5&down=async"
+            async
+          ></script>
+          <br /><a href="https://www.compteurdevisite.com"></a
+          ><noscript
+            ><a
+              href="https://www.compteurdevisite.com"
+              title="compteur de visite pour site"
+              ><img
+                src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+                border="0"
+                title="compteur de visite pour site"
+                alt="compteur de visite pour site" /></a></noscript
+          ><a
+            href="https://www.compteurdevisite.com"
+            title="compteur de visite pour site"
+            ><img
+              src="https://counter6.optistats.ovh/private/compteurdevisite.php?c=5fcqfzypudgdsemnsbze6b7t65tseqn5"
+              border="0"
+              title="compteur de visite pour site"
+              alt="compteur de visite pour site"
+          /></a>
+        </section>
+      </article>
+      <a onclick="alert('👍 Vous venez de liker! ✅')">
+        <img width="3%" title="(125) 👍 like!" />
+      </a>
+      <a href="#">Menu 2</a>
+      <div align="center">
+        <form method="post" enctype="multipart/form-data">
+          <div class="div-contenaire">
+            <!--Upload you picture-->
+            &#160;&nbsp;&#160;&nbsp;<img
+              [src]="imageURL"
+              width="80%"
+              alt="Your picture"
+              class="img"
+            />&#160;&nbsp; &#160;&nbsp;&#160;&nbsp; &#160;&nbsp;
+            <label class="custom-file-upload">
+              <input
+                type="file"
+                (change)="onFileChange($event)"
+                id="profile_pic"
+                name="profile_pic"
+                accept=".jpg,.jpeg,.png,"
+              />
+              Upload your picture!
+            </label>
+          </div>
+          <br />
+          <br />
+          <br />
+        </form>
+      </div>
+    </nav>
+  </div>
+  <footer>
+    <br />
+    <!--button réseau social jeux-market-souvenir-data-->
+    <a href="https://1drv.ms/f/s!Agq7QnMpjNWcyK4Cf--HZYjuN4xsNw?e=qdnfio">
+      <img
+        src="assets/button/button_Souvenirs.webp"
+        width="2.5%"
+        title="🕜 souvenirs"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://www.myhealth.belgium.be/#/">
+      <img
+        src="assets/button/button_Santé.jpg"
+        width="2.5%"
+        title="🍌🍉🍓 santé"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://clideo.com/fr/video-editor">
+      <img
+        src="assets/button/button_Video.png"
+        width="2.5%"
+        title="🎞️ video"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://www.facebook.com/marketplace/?ref=bookmark">
+      <img
+        src="assets/button/button_Market.jpg"
+        width="2.5%"
+        title="🛒 market"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+    /></a>
+    &#160;&nbsp; &#160;&nbsp;
+    <a href="https://www.crazygames.fr/t/arcade">
+      <img
+        src="assets/button/button_Jeux.jpg"
+        width="2.5%"
+        title="🎮🕹️👾 jeux"
+        style="
+          background-color: rgb(173, 182, 173);
+          border: 3.5px solid rgb(255, 0, 0);
+          border-radius: 50%;
+        "
+      />
+      <img
+        align="left"
+        src="assets\qrcode_localhost.png"
+        width="4%"
+        style="border-radius: 5%"
+      />
+    </a>
+    <h5 style="color: rgb(99, 95, 95)">
+      👉 © 2023, Your media ❙❙ social network ❙❙ Szmulikowski Vincent (stagiaire
+      technofuturtic / Java-Angular)
+    </h5>
+  </footer>
+</body>

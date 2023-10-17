@@ -1,0 +1,203 @@
+body {
+    font-family: arial;
+}
+/* Layout */
+html {
+    display: flex;
+    flex-direction: column;
+} /* IE fix */
+body {
+    display: flex; /* crée un contexte flex pour ses enfants */
+    flex-direction: column; /* affichage vertical */
+    min-block-size: 100vh; /* toute la hauteur du viewport (compatible IE9+) */
+}
+.wrapper {
+    display: block; /* IE fix */
+    flex: 1 1 auto; /* occupe la hauteur restante */
+    display: flex; /* crée un contexte flex pour ses enfants */
+    flex-direction: row; /* affichage horizontal */
+}
+nav {
+    inline-size: 15em;
+    order: -1;
+}
+.content {
+    display: block; /* IE fix */
+    flex: 1; /* occupe la largeur restante */
+}
+p {
+    margin: 17px;
+    padding: 15px;
+    color: #fff;
+}
+
+/* Responsive */
+
+@media(max-inline-size: 640px) {
+    body {
+        min-block-size: 0;
+    }
+    .wrapper {
+        flex-direction: column;
+    }
+    .content {
+        flex-basis: auto;
+        color: #616161;
+    }
+    nav {
+        inline-size: auto;
+        order: -1;
+    }
+}
+
+/* Decoration */
+
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: "Century Gothic", helvetica, arial, sans-serif;
+    font-size: 1.1em;
+}
+header,
+nav,
+section,
+footer {
+    padding: 10px;
+    margin: 0;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #c3e8f1;
+}
+
+nav {
+    background: #025974;
+}
+nav a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #fff;
+    text-decoration: none;
+    border-block-end: 1px solid rgba(255, 255, 255, 0.3);
+}
+section {
+    background: hotpink;
+}
+
+footer {
+    background: #c3e8f1;
+    text-align: center;
+    block-size: 130px;
+}
+header{
+    block-size: 100px;
+}
+
+/*css upload picture*/
+.button {
+    inline-size: 120px;
+    block-size: 50px;
+    border: 1.5px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 2.5px solid #4cf00c;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+/*css routeur link*/
+.button-link{
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/*css header*/
+/*css bare recherche*/
+.recherche {
+    inset-inline-start: 165px;
+    inset-block-start: 50px;
+    position: absolute;
+    inline-size: 350px;
+    block-size: 40px;
+    border-radius: 15px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(104, 107, 103);
+}
+
+/*css avatar header*/
+span.imageDroite {
+    inset-inline-start: 1995px;
+    inset-block-start: 28px;
+    position: absolute;
+
+    /* Un rond vert */
+    block-size: 80px;
+    inline-size:80px;
+    border-radius: 50%;
+    background-color: rgb(173, 182, 173);
+    border: 5px solid rgb(33, 250, 4);
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*csc notification*/
+span.notification {
+    inset-inline-start: 1930px;
+    inset-block-start: 42px;
+    position: absolute;
+
+    block-size: 60px;
+    inline-size: 60px;
+    border-radius: 50%;
+
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*csc tchat*/
+span.tchat {
+    inset-inline-start: 1860px;
+    inset-block-start: 42px;
+    position: absolute;
+
+    block-size: 60px;
+    inline-size: 60px;
+    border-radius: 50%;
+
+    /* Des initiales blanches */
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    /* Et centrées */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+
+

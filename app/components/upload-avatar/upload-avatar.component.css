@@ -1,0 +1,27 @@
+.img{
+padding: 5px;
+padding: 5px;
+border-color: chartreuse;
+border-radius: 50%;
+
+}
+
+.button{
+    inline-size: 120px;
+    block-size: 50px;
+    border: 1.5px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 2.5px solid #4cf00c;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}

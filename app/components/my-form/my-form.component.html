@@ -1,0 +1,124 @@
+<body>
+  <section class="content">
+    <div align="left">
+      <button>
+        <img
+          src="/assets/button/icone_Acceuil.jpg"
+          height="60"
+          width="60"
+          title="🏠 Back to Home Page"
+          style="border-radius: 50%"
+          onclick="alert('😐 Goodbye, maybe next time...')"
+          routerLink="/HomePage"
+        />
+      </button>
+      <form action="action.php" method="post">
+        <div class="wrapper fadeInDown">
+          <!--zone de connecxion/inscription-->
+          <div id="formContent">
+            <br />
+            <div align="center">
+              &#160;&nbsp;&#160;&nbsp;<button
+                onclick="window.location.reload ();"
+                style="
+                  color: rgb(255, 255, 255);
+                  border: 2.5px solid #6b7566;
+                  background-color: #56baed;
+                "
+                class="button"
+                title="⟳ refresh page"
+                value="Clear"
+              >
+                Refresh Page
+              </button>
+            </div>
+            <h2 class="active">Sign In</h2>
+            <h2 class="inactive underlineHover" onclick="">Sign Up</h2>
+            <!-- Icon -->
+            <br />
+            <br />
+            <div class="fadeIn first">
+              <img
+                src="assets/avatar/avatar_Defaut.jpg"
+                id="icon"
+                alt="User Icon"
+                title="🔴déconnecté"
+              />
+            </div>
+            <br />
+            <div align="center">
+              <form [formGroup]="form" method="get" (ngSubmit)="onSubmit()">
+                <div id="tout2">
+                  <input
+                    class="fadeIn second"
+                    formControlName="login"
+                    placeholder=""
+                    type="text"
+                    id="login"
+                    class="fadeIn second"
+                    placeholder="*login"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    autocomplete="off"
+                    minlength="8"
+                    maxlength="12"
+                    required="[required]"
+                    #name=""
+                  />
+                </div>
+                <h5 style="color: red">*Required field</h5>
+                <div id="tout2">
+                  <input
+                    class="fadeIn second"
+                    formControlName="password"
+                    placeholder=""
+                    type="password"
+                    id="password"
+                    class="fadeIn second"
+                    placeholder="*password"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    autocomplete="off"
+                    minlength="8"
+                    maxlength="12"
+                    required="[required]"
+                  />
+                </div>
+                <h5 style="color: red">*Required field</h5>
+                <input
+                  type="submit"
+                  class="fadeIn fourth"
+                  value="Log In"
+                  required="[required]"
+                  onclick="alert('🌐➡️ welcome in the social network...')"
+                  routerLink="/header"
+                />
+              </form>
+            </div>
+            <div id="formFooter">
+              <a
+                class="underlineHover"
+                href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=16&ct=1696786012&rver=7.0.6738.0&wp=MBI_SSL&wreply=https%3a%2f%2foutlook.live.com%2fowa%2f%3fcobrandid%3dab0455a0-8d03-46b9-b18b-df2f57b9e44c%26nlp%3d1%26deeplink%3dowa%252f%253fstate%253d1%26redirectTo%3daHR0cHM6Ly9vdXRsb29rLmxpdmUuY29tL21haWwvaW5ib3gv%26RpsCsrfState%3de46a80e7-872b-ad93-e6f8-21e835dc32be&id=292841&aadredir=1&whr=hotmail.com&CBCXT=out&lw=1&fl=dob%2cflname%2cwld&cobrandid=ab0455a0-8d03-46b9-b18b-df2f57b9e44c';"
+                >Forgot Password?</a
+              >
+              <div
+                style="color: black; text-decoration: underline"
+                onclick="location.href='mailto:szmulikowski.vincent.1971@hotmail.com';"
+              >
+                Send E-Mail
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <img
+      align="left"
+      src="assets\qrcode_localhost.png"
+      width="4%"
+      style="border-radius: 5%"
+    />
+    <h5 align="center" style="color: rgb(102, 99, 99)">
+      👉 © 2023, My form_page ❙❙ social network ❙❙ Szmulikowski Vincent
+      (stagiaire technofuturtic / Java-Angular)
+    </h5>
+  </section>
+</body>
